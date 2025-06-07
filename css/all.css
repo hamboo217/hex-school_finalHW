@@ -351,6 +351,17 @@ footer .copyright {
           justify-content: center;
 }
 
+@media (max-width: 1300px) {
+  main .allcard {
+    margin-left: 12px;
+  }
+  main .allcard .article-list {
+    gap: 24px 12px;
+  }
+  main .allcard .article-list .card {
+    width: 48%;
+  }
+}
 @media (max-width: 992px) {
   header .toolbar {
     -ms-flex-wrap: wrap;
