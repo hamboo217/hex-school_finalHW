@@ -353,7 +353,7 @@ footer .copyright {
 
 @media (max-width: 1300px) {
   main .allcard {
-    margin-left: 12px;
+    padding-left: 12px;
   }
   main .allcard .article-list {
     gap: 24px 12px;
