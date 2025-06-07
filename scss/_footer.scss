@@ -1,0 +1,46 @@
+
+footer{
+    max-width: 1920px;
+    height: 280px;
+    margin: 0 auto;
+    .contact{
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 208px;
+
+        .email{
+            width: 1036px;
+            height: 48px;
+            font-size: 32px;
+
+        }
+    }
+    .copyright{
+        text-align: center;
+        height: 72px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 1300px){
+
+}
+@media (max-width: 992px){
+    footer{
+        .contact{
+            display: none;
+        }
+        .copyright{
+            width: 100%;
+        }
+        height: 72px;
+
+    }
+}
+@media (max-width: 767px) {
+  
+}

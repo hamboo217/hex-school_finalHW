@@ -1,0 +1,29 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+//   outline: solid 1px; //切板時查看用 
+}
+img{
+    // min-width: 100%;
+    width: 100%;
+    height: auto;
+    vertical-align: middle; /* 讓圖片和下方不要有空白 */
+    object-fit: cover;
+}
+
+/*   web start   */
+body{
+    margin: 0 auto;
+    /* 前者是設定的字體，後者是通用字體，如果前者無法使用就會用通用的，保險!!*/
+    font-family: "Noto Sans TC", sans-serif;
+    font-weight: 500;
+    line-height: 1.5; /* 文字大小是由 line-height 做決定喔!!*/
+    background: #FBFBFB;
+}
+
+a{
+    display: inline-block;
+
+    text-decoration: none;
+    color: #4B4B4B;
+    /* color: inherit 繼承父層的顏色 */
+}
