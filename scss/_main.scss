@@ -1,0 +1,363 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+//   outline: solid 1px; //切板時查看用 
+}
+img{
+    // min-width: 100%;
+    width: 100%;
+    height: auto;
+    vertical-align: middle; /* 讓圖片和下方不要有空白 */
+    object-fit: cover;
+}
+
+/*   web start   */
+body{
+    margin: 0 auto;
+    // max-width: 1920px;
+    /* 前者是設定的字體，後者是通用字體，如果前者無法使用就會用通用的，保險!!*/
+    font-family: "Noto Sans TC", sans-serif;
+    font-weight: 500;
+    line-height: 1.5; /* 文字大小是由 line-height 做決定喔!!*/
+    background: #FBFBFB;
+}
+
+a{
+    display: inline-block;
+
+    text-decoration: none;
+    color: #4B4B4B;
+    /* color: inherit 繼承父層的顏色 */
+}
+
+header{
+    margin: 0 auto;
+    max-width: 1920px;
+    
+    .toolbar{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        li{
+
+            padding-top: 24px;
+            padding-bottom: 24px;
+            padding-left: 20px;
+            padding-right: 20px;
+            font-weight: 700;
+            font-size: 28px;
+            text-align: center;
+        }
+    }
+
+}
+
+main{
+    
+    max-width: 1920px;
+    margin: 0 auto;
+    .intro{
+        display: flex;
+        .intro_img{
+            width: 50%;
+        }
+        .intro_content{
+            background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/Hero%20Section2.png?raw=true");
+            width: 50%;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 80px;
+        
+            .intro_main{
+                font-weight: 900;
+                color:#0027D5;
+                font-size: 120px;
+            }
+
+            .intro_sub{
+                color:#0027D5;
+                font-size: 28px;
+            }
+        }
+        
+    }
+
+    .bigItem{
+        
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 80px;
+        .bigItem_left{
+            width: 49%;
+            // width: 948px;
+            // height: 640px;
+        }
+        .bigItem_right{
+            display: flex;
+            
+            align-items: center;
+            padding-left: 24px;
+            // height: 640px;
+            // width: 972px;
+            // width: 50%;
+            flex:1;
+
+            .bigItem_content{
+                .time{
+                    margin-bottom: 4px;
+                }
+                .hashtag{
+                    color:#0027D5;
+                    font-size: 24px;
+                    margin-bottom: 8px;
+                }
+                .title{
+                    font-size: 28px;
+                    font-weight: 700;
+                    margin-bottom: 8px;
+                }
+
+                /* 隱藏多行的溢出字元，需全血才能觸發 clamp*/
+                .text{
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 2; /* 設定要顯示幾行 */ 
+                    overflow: hidden;
+                    margin-bottom: 16px;
+                }
+
+                .btn{
+                    color: #4B4B4B;
+                    padding: 8px 16px;
+                    border: 1px solid #4B4B4B;
+                    border-radius: 80px;
+                }
+            }
+        }
+        
+    }
+
+    .allcard{
+        max-width: 1296px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        .search{
+            width: 416px;
+            height: 56px;
+            margin-bottom: 40px;
+            
+            .searchbar{
+                display: flex;
+                align-items: center;
+                color: #4B4B4B;
+                border-radius: 80px;
+                border: #4B4B4B 1px solid;
+                padding: 16px;    
+                
+                .searchicon{
+                    display: block;
+                    width: 24px;
+                    height: 24px;
+                }
+                .searchtext{
+                    width: 318px;
+                    // flex:1;
+                    height: 24px;
+                    background: none;
+                    border: none;
+                }
+            }  
+        }
+          
+
+
+        .article-list{
+            display: flex;
+            flex-wrap: wrap;
+            /* 用gap取代，解決如果沒辦法均分時會導致有空白的問題 justify-content: space-between;*/
+            gap: 80px 24px;
+            margin-bottom: 40px;
+            // width: 100%;
+            .card{
+                // max-width: 416px;
+                width: 416px;
+                img{
+                    margin-bottom: 16px;
+                }
+                .hashtag{
+                    color: #0027D5;
+                    font-size: 24px;
+                    margin-right: 8px;
+                }
+                .title{
+                    font-size: 28px;
+                    font-weight: 700;
+                    margin-bottom: 8px;
+                }
+                .text{
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 2; /* 設定要顯示幾行 */ 
+                    overflow: hidden;
+                    margin-bottom: 16px;
+                }
+                .btn{
+                    padding: 8px 16px;
+                    border: 1px solid #000;
+                    border-radius: 80px;
+
+                    &:hover{
+                        background: #000;
+                        color: white;
+                    }
+                }
+                
+            }
+        }
+
+        .pagelist{
+            width: 328px;
+            height: 56px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            background: white;
+            border-radius: 80px;
+            .page{
+                // padding: 20px 40px;
+                width: 40px;
+                height: 40px;
+                text-align: center;
+
+            }
+        }
+    }
+    
+}
+
+.specialTag{
+    padding: 6px 11px;
+    font-size: 16px;
+    color: #FFFFFF;
+    background: #0027D5;
+    border-radius: 80px;
+}
+
+footer{
+    max-width: 1920px;
+    height: 280px;
+    margin: 0 auto;
+    // width: 1920px;
+
+    .contact{
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 208px;
+
+        .email{
+            width: 1036px;
+            height: 48px;
+            font-size: 32px;
+
+        }
+    }
+    .copyright{
+        text-align: center;
+        height: 72px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+@media (max-width: 992px){
+    header{
+        .toolbar{
+            flex-wrap: wrap;
+            
+        }
+    }
+
+    main{
+        .intro {
+            flex-direction: column;
+            .intro_img{
+                width: 100%;
+                
+                img{
+                    height: 375px;
+                    object-fit: cover;
+                    object-position: right;
+                }
+            }
+            .intro_content{
+                padding: 24px;
+                width: 100%;
+                .intro_main{
+                    font-size: 52px;
+                }
+                .intro_sub{
+                    font-size: 28px;
+                }
+                
+            }
+        }
+        .bigItem{
+            .bigItem_left{
+                width: 100%;
+            }
+            .bigItem_right{
+                width: 100%;
+                height: 364px;
+                padding: 48px 12px;
+            }
+        }
+        
+        .allcard{
+            width: 100%;
+            
+            .search{
+                // margin: 12px;
+                padding: 12px;
+                width: 100%;
+            }
+            .article-list{
+                gap: 24px 12px;
+                .card{
+                    padding: 12px;
+                    width: 100%;
+                    // margin-bottom: 32px;
+                }
+            }
+        }
+
+        .pagelist{
+            width: 100%;
+        }
+    }
+    footer{
+        .contact{
+            display: none;
+        }
+        .copyright{
+            width: 100%;
+        }
+        height: 72px;
+
+    }
+}
+@media (max-width: 767px) {
+    // .intro {
+    //     .intro_img, .intro_content{
+    //         width: 100%;
+    //     }
+    // }
+}

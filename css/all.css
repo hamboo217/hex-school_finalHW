@@ -1,0 +1,419 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: middle; /* 讓圖片和下方不要有空白 */
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/*   web start   */
+body {
+  margin: 0 auto;
+  /* 前者是設定的字體，後者是通用字體，如果前者無法使用就會用通用的，保險!!*/
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 500;
+  line-height: 1.5; /* 文字大小是由 line-height 做決定喔!!*/
+  background: #FBFBFB;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: #4B4B4B;
+  /* color: inherit 繼承父層的顏色 */
+}
+
+header {
+  margin: 0 auto;
+  max-width: 1920px;
+}
+header .toolbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header .toolbar li {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-weight: 700;
+  font-size: 28px;
+  text-align: center;
+}
+
+main {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+main .intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+main .intro .intro_img {
+  width: 50%;
+}
+main .intro .intro_content {
+  background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/Hero%20Section2.png?raw=true");
+  width: 50%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 80px;
+}
+main .intro .intro_content .intro_main {
+  font-weight: 900;
+  color: #0027D5;
+  font-size: 120px;
+}
+main .intro .intro_content .intro_sub {
+  color: #0027D5;
+  font-size: 28px;
+}
+main .bigItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 80px;
+}
+main .bigItem .bigItem_left {
+  width: 49%;
+}
+main .bigItem .bigItem_right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 24px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+main .bigItem .bigItem_right .bigItem_content {
+  /* 隱藏多行的溢出字元，需全血才能觸發 clamp*/
+}
+main .bigItem .bigItem_right .bigItem_content .time {
+  margin-bottom: 4px;
+}
+main .bigItem .bigItem_right .bigItem_content .hashtag {
+  color: #0027D5;
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+main .bigItem .bigItem_right .bigItem_content .title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+main .bigItem .bigItem_right .bigItem_content .text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; /* 設定要顯示幾行 */
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+main .bigItem .bigItem_right .bigItem_content .btn {
+  color: #4B4B4B;
+  padding: 8px 16px;
+  border: 1px solid #4B4B4B;
+  border-radius: 80px;
+}
+main .allcard {
+  max-width: 1296px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+main .allcard .search {
+  width: 416px;
+  height: 56px;
+  margin-bottom: 40px;
+}
+main .allcard .search .searchbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #4B4B4B;
+  border-radius: 80px;
+  border: #4B4B4B 1px solid;
+  padding: 16px;
+}
+main .allcard .search .searchbar .searchicon {
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+main .allcard .search .searchbar .searchtext {
+  width: 318px;
+  height: 24px;
+  background: none;
+  border: none;
+}
+main .allcard .article-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  /* 用gap取代，解決如果沒辦法均分時會導致有空白的問題 justify-content: space-between;*/
+  gap: 80px 24px;
+  margin-bottom: 40px;
+}
+main .allcard .article-list .card {
+  width: 416px;
+}
+main .allcard .article-list .card img {
+  margin-bottom: 16px;
+}
+main .allcard .article-list .card .hashtag {
+  color: #0027D5;
+  font-size: 24px;
+  margin-right: 8px;
+}
+main .allcard .article-list .card .title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+main .allcard .article-list .card .text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; /* 設定要顯示幾行 */
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+main .allcard .article-list .card .btn {
+  padding: 8px 16px;
+  border: 1px solid #000;
+  border-radius: 80px;
+}
+main .allcard .article-list .card .btn:hover {
+  background: #000;
+  color: white;
+}
+main .allcard .pagelist {
+  width: 328px;
+  height: 56px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+  background: white;
+  border-radius: 80px;
+}
+main .allcard .pagelist .page {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+}
+
+.specialTag {
+  padding: 6px 11px;
+  font-size: 16px;
+  color: #FFFFFF;
+  background: #0027D5;
+  border-radius: 80px;
+}
+
+footer {
+  max-width: 1920px;
+  height: 280px;
+  margin: 0 auto;
+}
+footer .contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 208px;
+}
+footer .contact .email {
+  width: 1036px;
+  height: 48px;
+  font-size: 32px;
+}
+footer .copyright {
+  text-align: center;
+  height: 72px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (max-width: 992px) {
+  header .toolbar {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  main .intro {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main .intro .intro_img {
+    width: 100%;
+  }
+  main .intro .intro_img img {
+    height: 375px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: right;
+       object-position: right;
+  }
+  main .intro .intro_content {
+    padding: 24px;
+    width: 100%;
+  }
+  main .intro .intro_content .intro_main {
+    font-size: 52px;
+  }
+  main .intro .intro_content .intro_sub {
+    font-size: 28px;
+  }
+  main .bigItem .bigItem_left {
+    width: 100%;
+  }
+  main .bigItem .bigItem_right {
+    width: 100%;
+    height: 364px;
+    padding: 48px 12px;
+  }
+  main .allcard {
+    width: 100%;
+  }
+  main .allcard .search {
+    padding: 12px;
+    width: 100%;
+  }
+  main .allcard .article-list {
+    gap: 24px 12px;
+  }
+  main .allcard .article-list .card {
+    padding: 12px;
+    width: 100%;
+  }
+  main .pagelist {
+    width: 100%;
+  }
+  footer {
+    height: 72px;
+  }
+  footer .contact {
+    display: none;
+  }
+  footer .copyright {
+    width: 100%;
+  }
+}
